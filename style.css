@@ -10,7 +10,6 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-
 }
 
 ul {
@@ -18,9 +17,8 @@ ul {
 }
 
 #moviesList {
-    margin: 100px 10% 0 10%;
     width: 80%;
-    
+    margin: 100px 10% 0 10%;
 }
 
 #moviesList li {

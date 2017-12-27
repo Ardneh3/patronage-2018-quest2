@@ -5,6 +5,8 @@ moviesCounterAll.textContent = moviesAll;
 let moviesSeen = 0;
 const moviesCounterSeen = document.getElementById('moviesCounterSeen');
 
+const moviesList = document.getElementById('moviesList');
+
 //counting seen movies
 const seenMovies = () => {
     for (let i = 0; i < moviesAll; i++) {
@@ -14,14 +16,10 @@ const seenMovies = () => {
     }
 }
 
-seenMovies();
-
 //updating seen movies counter in html
 const addMoviesSeen = () => {
 moviesCounterSeen.textContent = moviesSeen;
 }
-
-const moviesList = document.getElementById('moviesList');
 
 const addMovieToList = () => {
     for (let i = 0; i < moviesAll; i++) {
@@ -36,7 +34,6 @@ const addMovieToList = () => {
         moviesList.appendChild(newElement);
     }
 }
-addMovieToList();
 
 //listening change on movies list (checking seen movies) and changing value in moviesData to "T"
 const eventListener = () => {
@@ -59,6 +56,7 @@ icons.addEventListener('click', function() {
 })
     }
 }
-
+seenMovies();
+addMovieToList();
 eventListener();
 addMoviesSeen();
