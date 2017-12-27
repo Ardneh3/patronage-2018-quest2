@@ -1,0 +1,38 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+#moviesCountersContainer {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+#moviesList {
+    margin: 100px 10% 0 10%;
+    width: 80%;
+    
+}
+
+#moviesList li {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#moviesList li:hover {
+    background-color: #212121;
+    color: #fff;
+}
+
+.fa-check, .fa-times {
+    font-size: 4rem;
+}
