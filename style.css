@@ -6,10 +6,13 @@ html {
 }
 
 #moviesCountersContainer {
-    font-weight: bold;
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.moviesCounter {
+    font-weight: bold;
 }
 
 ul {
@@ -22,7 +25,7 @@ ul {
 }
 
 #moviesList li {
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 10px;
 }
 
@@ -31,6 +34,20 @@ ul {
     color: #fff;
 }
 
-.fa-check, .fa-times {
-    font-size: 4rem;
+button {
+    width: 130px;
+    font-size: 1.1rem;
+    border: none;
+    color: #FFF;
+    padding: 15px 32px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-green {
+    background-color: #4CAF50;
+}
+
+.btn-red {
+    background-color: #801515;
 }

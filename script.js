@@ -18,16 +18,17 @@ const seenMovies = () => {
 
 //updating seen movies counter in html
 const addMoviesSeen = () => {
-moviesCounterSeen.textContent = moviesSeen;
+    moviesCounterSeen.textContent = moviesSeen;
 }
 
+//adding movies to html list
 const addMovieToList = () => {
     for (let i = 0; i < moviesAll; i++) {
         let seen = '';
         if (moviesData[i].seen === 'T') {
-            seen = `<i class="fa fa-check" aria-hidden="true"></i>`;
+            seen = `<button type="button" class="btn-green" id="${i}">seen</button>`;
         } else {
-            seen = `<i class="fa fa-times" aria-hidden="true"></i>`;
+            seen = `<button type="button" class="btn-red" id="${i}">unseen</button>`;
         }
         let newElement = document.createElement('li');
         newElement.innerHTML = `${moviesData[i].title} <br> ${moviesData[i].year} <br> ${moviesData[i].genre} <br> ${moviesData[i].summary} <br> ${seen}`;
@@ -35,28 +36,32 @@ const addMovieToList = () => {
     }
 }
 
-//listening change on movies list (checking seen movies) and changing value in moviesData to "T"
-const eventListener = () => {
+//changing seen property after click
+const listeningClicks = () => {
     for (let i = 0; i < moviesAll; i++) {
-const icons = document.getElementsByTagName('i')[i];
+        const btn = document.getElementById(`${i}`);
 
-icons.addEventListener('click', function() {
-    const classes = icons.classList;
-        if (classes.contains('fa-times')) {
-        this.classList.remove('fa-times');
-        this.classList.add('fa-check');
-            moviesSeen++;
-            addMoviesSeen();
-            for (let i = 0; i < moviesAll; i++) {
-                if (classes.contains('fa-check')) {
-                    moviesData[i].seen = "T";
-                }
+        btn.addEventListener('click', function () {
+            if (moviesData[i].seen === 'T') {
+                moviesData[i].seen = 'F';
+                btn.innerHTML = 'unseen';
+                this.classList.remove('btn-green');
+                this.classList.add('btn-red');
+                moviesSeen--;
+                addMoviesSeen();
+            } else {
+                moviesData[i].seen = 'T';
+                btn.innerHTML = 'seen';
+                this.classList.remove('btn-red');
+                this.classList.add('btn-green');
+                moviesSeen++;
+                addMoviesSeen();
             }
-        }
-})
+        })
     }
 }
+
 seenMovies();
-addMovieToList();
-eventListener();
 addMoviesSeen();
+addMovieToList();
+listeningClicks();
