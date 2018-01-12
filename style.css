@@ -1,4 +1,4 @@
-html {
+* {
     margin: 0;
     padding: 0;
     font-size: 20px;
@@ -13,6 +13,10 @@ html {
 
 .moviesCounter {
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -50,4 +54,70 @@ button {
 
 .btn-red {
     background-color: #801515;
+}
+
+/* add.html styles */
+
+#formContainer {
+    width: 25%;
+    margin: 5% auto;
+}
+
+.form-row {
+    display: flex;
+}
+
+.form-row input,
+.form-row textarea {
+    flex: 1;
+    margin: 5px 0 0 10px;
+}
+
+.form-row textarea {
+    height: 70px;
+    overflow: auto;
+}
+
+.form-row label {
+    margin-top: 5px;
+    width: 21%;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    background-color: #FFFFAA;
+}
+
+.add-btn {
+    width: 120%;
+    display: flex;
+    justify-content: center;
+}
+
+#form_btn {
+
+    width: 130px;
+    margin-top: 10px;
+    background-color: #55AA55;
+}
+
+#form_btn:hover {
+    background-color: #004400;
+}
+
+#form-requirements {
+    width: 120%;
+    font-size: 0.9rem;
+    color: #4D5F63;
+
+}
+
+#form-requirements p {
+    margin: 5px auto;
+    text-align: center;
+}
+
+.asterisk {
+    font-size: 0.8rem;
+    vertical-align: super;
 }

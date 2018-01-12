@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Add a movie</title>
+</head>
+
+<body>
+    <div id="moviesCountersContainer">
+        <p>All: <span class="moviesCounter" id="anotherMoviesCounterAll"></span></p>
+        <p>Viewed: <span class="moviesCounter" id="anotherMoviesCounterSeen"></span></p>
+    </div>
+    <a href="index.html">Home</a>
+    <div id="formContainer">
+        <form id="adding_form">
+            <div class="form-row">
+                <label for="title">Title<span class="asterisk">*</span>:</label>
+                <input type="text" id="title" name="movie_name">
+            </div>
+            <div class="form-row">
+                <label for="year">Year<span class="asterisk">*</span>:</label>
+                <input type="text" id="year" name="movie_year">
+            </div>
+            <div class="form-row">
+                <label for="genre">Genre<span class="asterisk">*</span>:</label>
+                <input type="text" id="genre" name="movie_genre">
+            </div>
+            <div class="form-row">
+                <label for="summary">Summary:</label>
+                <textarea id="summary" name="movie_summary"></textarea>
+            </div>
+            <div id="form-requirements">
+                <p>*required input</p>
+            </div>
+            <div class="add-btn">
+                <button name="submit_form" type="button" id="form_btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="add.js"></script>
+</body>
+
+</html>
